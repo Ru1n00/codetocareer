@@ -2,6 +2,8 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_cors import CORS, cross_origin
+
 # third party packages
 import jwt
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -16,6 +18,10 @@ import dotenv
 
 # create the app
 app = Flask(__name__)
+
+# configure CORS
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 # create the extension
 # configure the SQLite database, relative to the app instance folder
 
@@ -84,7 +90,6 @@ def index():
 
 ## user routes
 @app.route('/api/create-user', methods=['GET', 'POST'])
-@token_required
 def create_user():
     if request.method == 'POST':
         data = request.get_json()
