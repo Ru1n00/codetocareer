@@ -131,21 +131,33 @@ def login():
     # get username and password from the request
     email = data.get('email')
     password = data.get('password')
+    is_student = data.get('is_student')
 
     # check if username and password are not empty
     if not email or not password:
-        return jsonify({'message': 'Username or password is missing'})
+        response = jsonify({'message': 'email or password is missing'})
+        response.status_code = 400
+        return response
     
     # check if username and password are correct
     user = User.query.filter_by(email=email).first()
     if user:
+        if user.is_student != is_student:
+            response = jsonify({'message': 'User is not a ' + ('student' if is_student else 'teacher')})
+            response.status_code = 403
+            return response
+        
         if check_password_hash(user.password, password):
             token = jwt.encode({'email': email, 'exp': datetime.now(timezone.utc) + timedelta(hours=7)}, app.config['SECRET_KEY'])
             return jsonify({'message': 'Logged in', 'token': token})
         else:
-            return jsonify({'message': 'Wrong password'})
+            response = jsonify({'message': 'Wrong password'})
+            response.status_code = 403
+            return response
     else:
-        return jsonify({'message': 'Wrong email or password'})
+        response = jsonify({'message': 'Wrong email or password'})
+        response.status_code = 404
+        return response
     
 
 @app.route('/api/change-password', methods=['POST'])
@@ -159,23 +171,31 @@ def change_password():
 
     # check if username and password are not empty
     if not email or not password or not new_password:
-        return jsonify({'message': 'email, password or new_password is missing'})
+        response = jsonify({'message': 'email, password or new_password is missing'})
+        response.status_code = 400
+        return response
     
     # check if username and password are correct
     user = User.query.filter_by(email=email).first()
     if user:
         if check_password_hash(user.password, password):
             if not validate_password(new_password):
-                return jsonify({'message': 'Password is too short'})
+                response = jsonify({'message': 'Password is too short'})
+                response.status_code = 400
+                return response
             hashed_password = generate_password_hash(new_password)
             user.password = hashed_password
             user.updated_at = datetime.now(datetime.timezone.utc)
             db.session.commit()
             return jsonify({'message': 'Password changed'})
         else:
-            return jsonify({'message': 'Wrong usernamer or password'})
+            response = jsonify({'message': 'Wrong email or password'})
+            response.status_code = 403
+            return response
     else:
-        return jsonify({'message': 'Wrong username or password'})
+        response = jsonify({'message': 'Wrong email or password'})
+        response.status_code = 404
+        return response
     
 
 
