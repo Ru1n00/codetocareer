@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signupstyle.css" />
+  <script>
+    function updateAction() {
+      var role = document.querySelector('input[name="role"]:checked').value;
+      var form = document.querySelector('form');
+      if (role === 'student') {
+        form.action = 'student_dashboard.html';
+      } else if (role === 'teacher') {
+        form.action = 'teacher_dashboard.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <form onsubmit="updateAction()">
+      <h1>Sign Up</h1>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <div>
+        <label><input type="radio" name="role" value="student" required /> Student</label>
+        <label><input type="radio" name="role" value="teacher" required /> Teacher</label>
+      </div>
+      <input type="submit" value="Sign up!" />
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>

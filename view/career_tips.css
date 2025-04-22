@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 50px;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  ul {
+    text-align: left;
+    line-height: 1.6em;
+  }

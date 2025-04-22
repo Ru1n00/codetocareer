@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1cb5e0, #000046);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Back to Home link styled like a button */
+a {
+    padding: 12px 24px;
+    background-color: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #00b894;
+    transform: scale(1.05);
+}

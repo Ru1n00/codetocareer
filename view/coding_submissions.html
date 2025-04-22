@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding Challenge Submissions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Submit Your Coding Challenge</h2>
+    <form action="../backend/submit_code.php" method="POST">
+      <label>Your Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Challenge Title:</label>
+      <input type="text" name="title" required>
+
+      <label>Your Code:</label>
+      <textarea name="code" rows="10" required></textarea>
+
+      <input type="submit" value="Submit Code">
+    </form>
+  </div>
+</body>
+</html>

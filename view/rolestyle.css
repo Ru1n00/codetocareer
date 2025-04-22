@@ -1,0 +1,54 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  
+  .role-buttons {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .btn {
+    padding: 15px 30px;
+    background-color: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #00b894;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }

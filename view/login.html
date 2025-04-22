@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="loginstyle.css" />
+  <script>
+    function validateForm() {
+      var role = document.querySelector('input[name="role"]:checked');
+      if (!role) {
+        alert("Please select a role.");
+        return false; // prevent submission
+      }
+      return true; // allow form submission
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <form action="../backend/login.php" method="POST" onsubmit="return validateForm()">
+      <table>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" id="password" name="password" required /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div>
+              <input type="radio" name="role" value="student" required /> Student
+              <input type="radio" name="role" value="teacher" required /> Teacher
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Login!" /></td>
+        </tr>
+      </table>
+    </form>
+    <h1>Don't have an account? <a href="signup.html">Sign up</a></h1>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coding Challenge</title>
+  <link rel="stylesheet" href="coding_challenge.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weekly Coding Challenge</h1>
+    <p>Solve the following problem:</p>
+    <pre>
+Write a function that returns the factorial of a number.
+Function signature: <code>int factorial(int n)</code>
+    </pre>
+
+    <form action="../controller/submit_challenge.php" method="POST">
+      <label for="title">Challenge Title:</label><br>
+      <input type="text" id="title" name="title" value="Weekly Coding Challenge" readonly><br><br>
+
+      <label for="code">Your Code:</label><br>
+      <textarea id="code" name="code" rows="10" required></textarea><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Quiz</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Career Fit Quiz</h1>
+    <form action="quiz_result.html" method="POST">
+      <label>1. Which do you prefer?</label><br>
+      <input type="radio" name="q1" value="frontend" required> Designing Interfaces<br>
+      <input type="radio" name="q1" value="backend"> Solving Logic<br>
+      <input type="radio" name="q1" value="data"> Analyzing Numbers<br>
+
+      <label>2. Your favorite language?</label><br>
+      <input type="radio" name="q2" value="javascript" required> JavaScript<br>
+      <input type="radio" name="q2" value="python"> Python<br>
+      <input type="radio" name="q2" value="java"> Java<br>
+
+      <input type="submit" value="Get Result">
+    </form>
+    <a href="student_dashboard.html">Back to Dashboard</a>
+  </div>
+</body>
+</html>

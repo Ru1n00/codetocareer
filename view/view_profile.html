@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>My Profile</h2>
+    <form method="POST" action="update_profile.php">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="Student Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="student@email.com" readonly>
+
+      <label for="password">New Password (optional):</label>
+      <input type="password" id="password" name="password">
+
+      <input type="submit" value="Update Profile" />
+    </form>
+    <br>
+    <a href="student_dashboard.html"><input type="button" value="Back to Dashboard"></a>
+  </div>
+</body>
+</html>

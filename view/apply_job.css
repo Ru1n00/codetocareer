@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  select, input[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }

@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to right, #232526, #414345);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    margin: auto;
+    max-width: 800px;
+  }
+  
+  section {
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }

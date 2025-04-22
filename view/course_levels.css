@@ -1,0 +1,43 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to left, #141e30, #243b55);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 100px;
+  }
+  .menu a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    padding: 40px;
+  }
+  .levels {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .level {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .btn {
+    margin-right: 15px;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }

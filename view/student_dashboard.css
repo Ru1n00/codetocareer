@@ -1,0 +1,58 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #00ffcc;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    color: white;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+a {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    background-color: #00ffcc;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+a:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #00b894;
+}

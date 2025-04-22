@@ -1,0 +1,87 @@
+/* General page styles */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+}
+
+/* Navigation menu */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #00ffcc;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Optional: vertically center content */
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Auth buttons */
+.auth-buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #00b894;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 350px; /* increased from 100px to 200px or more */
+    background-color: rgba(0, 0, 0, 0.2);
+}

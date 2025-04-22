@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply for a Job</title>
+  <link rel="stylesheet" href="apply_job.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Apply for a Job</h1>
+    <form action="job_success.html" method="POST">
+      <label for="job">Select Job Role:</label>
+      <select id="job" name="job" required>
+        <option value="">--Choose a Role--</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Full Stack Developer</option>
+        <option value="data">Data Analyst</option>
+      </select>
+      <input type="submit" value="Apply">
+    </form>
+    <a href="student_dashboard.html">Back to Dashboard</a>
+  </div>
+</body>
+</html>
